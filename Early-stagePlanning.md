@@ -1,0 +1,7 @@
+# 3. Early-stage planning¶
+When contemplating a Linux kernel development project, it can be tempting to jump right in and start coding. As with any significant project, though, much of the groundwork for success is best laid before the first line of code is written. Some time spent in early planning and communication can save far more time later on.
+
+3.1 Specifying the problem¶
+Like any engineering project, a successful kernel enhancement starts with a clear description of the problem to be solved. In some cases, this step is easy: when a driver is needed for a specific piece of hardware, for example. In others, though, it is tempting to confuse the real problem with the proposed solution, and that can lead to difficulties.
+
+Consider an example: some years ago, developers working with Linux audio sought a way to run applications without dropouts or other artifacts caused by excessive latency in the system. The solution they arrived at was a kernel module intended to hook into the Linux Security Module (LSM) framework; this module could be configured to give specific applications access to the realtime scheduler. This module was implemented and sent to the linux-kernel mailing list, where it immediately ran into problems.
