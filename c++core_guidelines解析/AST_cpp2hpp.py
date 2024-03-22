@@ -207,8 +207,8 @@ def traverse_interface_assamble(node: CX.Cursor, prefix="", is_last=True,to_clos
                
 
 
-            elif father_type ==CursorKind.FUNCTION_DECL :#闭合constructor
-                output_list.append(f"{prefix + '   '}{'){};'}")
+            elif father_type ==CursorKind.FUNCTION_DECL :#闭合Func Decl 不能加{}，加了{}认为是implementation。
+                output_list.append(f"{prefix + '   '}{');'}")
                 global_param_count_clear()
 
 
